@@ -1,0 +1,90 @@
+{% load static %}
+<header class="header header__top">
+  <div class="container header__container">
+    <a href="{% url 'flatpages:home' %}" class="header__logo">
+      <img 
+        srcset="{% static 'img/icons/logo.png'%} 1x, {% static 'img/icons/logo@2x.png' %} 2x"
+        src="{% static 'img/icons/logo.png'%}"
+      >
+    </a>
+
+    <nav class="nav" role="navigation">
+      <input id="menuToggle" type="checkbox">
+      <label for="menuToggle" class="nav__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav__menu">
+        <div class="nav__wrapper">
+          <li class="nav__item">
+            {% url 'flatpages:home' as home %}
+            <a 
+              href="{{ home }}" 
+              class="nav__link {% if request.path == home %}nav__link--active{% endif %}"
+            >
+              Home
+            </a>
+          </li>
+    
+          <li class="nav__item">
+            {% url 'flatpages:articles' as blog %}
+            <a 
+              href="{{ blog }}" 
+              class="nav__link {% if request.path == blog %}nav__link--active{% endif %}"
+            >
+              Blog
+            </a>
+          </li>
+         
+          <li class="nav__item">
+            {% url 'flatpages:support' as faq %}
+            <a 
+              href="{{ faq }}" 
+              class="nav__link {% if request.path == faq %}nav__link--active{% endif %}"
+            >
+              FAQ
+            </a>
+          </li>
+         
+          <li class="nav__item">
+              {% url 'flatpages:contact-us' as contact %}
+            <a 
+              href="{{ contact }}" 
+              class="nav__link {% if request.path == contact %}nav__link--active{% endif %}"
+            >
+              Contacts Us
+            </a>
+          </li>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="nav__wrapper">
+          <li class="nav__item nav__item--login">
+            <a href="{% url 'logout' %}" 
+              class="btn btn--sm btn--white nav__login">
+                Logout
+            </a>
+          </li>
+        </div>
+        {% else %}
+        <div class="nav__wrapper">
+          <li class="nav__item nav__item--register">
+            <a href="{% url 'flatpages:register' %}" 
+              class="btn btn--sm btn--white nav__register">
+               Register
+            </a>
+          </li>
+  
+          <li class="nav__item nav__item--login">
+            <a href="{% url 'login' %}" 
+              class="btn btn--sm btn--white nav__login">
+                Login
+            </a>
+          </li>
+        </div>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</header>  

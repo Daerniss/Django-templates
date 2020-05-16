@@ -1,0 +1,103 @@
+.form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 6.5rem 4rem 8rem;
+	border-radius: 10px;
+	width: 100%;
+	max-width: 482px;
+	border: 1px solid $color-primary;
+
+	&__group {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 7rem;
+		}
+	}
+
+	&__label {
+		position: absolute;
+
+		font-size: 16px;
+		color: $color-primary;
+		top: 3rem;
+		left: 2.7rem;
+		font-weight: 400;
+		transition: all .4s ease-in-out;
+		cursor: text;
+
+		@include respond(sm) {
+			top: 2.4rem;
+		}
+	}
+
+	&__input {
+		padding: 1.9rem 0 1.9rem 2.5rem;
+		font-size: 18px;
+		border: 1px solid #e1e1e1;
+		transition: all .3s;
+		border-radius: 10px;
+		width: 100%;
+		display: block;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 .5rem .5rem rgba(#000, .1);
+		}
+	}
+
+	&__input:not(:placeholder-shown) + &__label {
+		transform: translateY(-8rem);
+
+		@include respond(md) {
+			transform: translateY(-6rem);
+		}
+	}
+
+	&__password-reset {
+		color: red;
+		display: block;
+		position: absolute;
+		padding: 1rem;
+		font-size: 20px;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 45%);
+		background-color: $color-white;
+		z-index: 10;
+		transition: all .2s;
+
+		&:hover {
+			color: lighten(red, 30%);
+		}
+	}
+
+	// select.form__input:not(:placeholder-shown) + &__label {
+	// 	transform: translate(0, -6rem);
+	// }
+
+	select.form__input {
+		background-color: transparent;
+	}
+
+	select.form__input option:checked &__label {
+		transform: translateY(-8rem);
+	}
+
+	select.form__input + &__label {
+		background-color: $color-white;
+	}
+
+	textarea {
+		max-width: 100%;
+		resize: none;
+	}
+
+	&__errors {
+		color: orangered;
+		font-size: 15px;
+		padding: 1.5rem 0 0 1.5rem;
+	}
+}

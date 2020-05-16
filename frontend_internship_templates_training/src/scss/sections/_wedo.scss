@@ -1,0 +1,34 @@
+.wedo {
+	padding: 10rem 0 7rem;
+
+	&__container {
+		text-align: center;
+	}
+
+	&__heading {
+		margin-bottom: 7rem;
+	}
+
+	&__item {
+		padding: 3.4rem 2.8rem 4.3rem;
+		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+	}
+
+	&__icon {
+		margin-bottom: 5.4rem;
+	}
+
+	&__title {
+		color: $color-gray;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 3rem;
+	}
+
+	&__description {
+		color: $color-gray-dark;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}

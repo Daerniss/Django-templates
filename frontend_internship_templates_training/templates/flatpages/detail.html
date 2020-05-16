@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Designik | {{ flatpage.title }} {% endblock title %}
+
+{% block content %}
+<section class="flatpage">
+  <div class="container">
+    <h1 class="flatpage__header">
+      {{ flatpage.title }}
+    </h1>
+    <div class="flatpage__content">
+      {{ flatpage.content|safe }}
+    </div>
+  </div>
+</section>
+{% endblock content %}
+

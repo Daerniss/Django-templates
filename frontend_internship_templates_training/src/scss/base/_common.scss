@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 31.25%;
+
+  // font-size: 43.75%;
+  @include respond(sm) {
+    font-size: 50%;
+  }
+
+  @include respond(md) {
+    font-size: 56.25%;
+  }
+
+  @include respond(lg) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.main {
+  padding-top: 78px;
+
+  @include respond(sm) {
+    padding-top: 93px;
+  }
+
+  @include respond(md) {
+    padding-top: 98px;
+  }
+
+  @include respond(lg) {
+    padding-top: 103px;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1110px;
+  padding: 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond(lg) {
+    padding: 0;
+  }
+}

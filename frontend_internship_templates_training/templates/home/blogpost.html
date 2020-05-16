@@ -1,0 +1,163 @@
+{% load static %}
+<section class="blogpost">
+  <div class="container">
+    {% include '../common/heading.html' with class="blogpost" text="Our Blogpost" %}
+
+    <ul class="blogpost__list">
+
+      <li class="blogpost__item">
+        <div class="blogpost__head">
+          <img 
+            src="{% static 'img/img-blogpost-1.jpg' %}" 
+            alt="blog" 
+            class="blogpost__img"
+          >
+          <div class="blogpost__date-wrap">
+            <img src="{% static 'img/img-blogpost-hover.png' %}" alt="">
+            <div class="blogpost__date">
+              <span>22</span>
+              Jan
+            </div>
+          </div>
+          
+          <a href="/" class="blogpost__like">
+            <i class="icon-heart"></i>
+          </a>
+        </div>
+
+        <div class="blogpost__body">
+          <h3 class="blogpost__title">
+            How to Use Rotary Evaporator in Chemical Labs
+          </h3>
+          <p class="blogpost__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim,
+          </p>
+        </div>
+
+        <div class="blogpost__footer">
+          <img 
+            src="{% static 'img/icons/icon-blogpost-avatar-1.png' %}" 
+            alt="Author picture" 
+            class="blogpost__avatar"
+          >
+          <p class="blogpost__author-name">
+            Lurisa Andrew
+          </p>
+          <div class="blogpost__activity">
+            <i class="icon-heart"></i>
+            <span>26</span>
+          </div>
+          <div class="blogpost__activity">
+            <i class="icon-chat"></i>
+            <span>7</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="blogpost__item">
+        <div class="blogpost__head">
+          <img 
+            src="{% static 'img/img-blogpost-2.jpg' %}" 
+            alt="blog" 
+            class="blogpost__img"
+          >
+          <div class="blogpost__date-wrap">
+            <img src="{% static 'img/img-blogpost-hover.png' %}" alt="">
+            <div class="blogpost__date">
+              <span>22</span>
+              Jan
+            </div>
+          </div>
+          
+          <a href="/" class="blogpost__like">
+            <i class="icon-heart"></i>
+          </a>
+        </div>
+
+        <div class="blogpost__body">
+          <h3 class="blogpost__title">
+            How to Use Rotary Evaporator in Chemical Labs
+          </h3>
+          <p class="blogpost__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim,
+          </p>
+        </div>
+
+        <div class="blogpost__footer">
+          <img 
+            src="{% static 'img/icons/icon-blogpost-avatar-2.png' %}" 
+            alt="Author picture" 
+            class="blogpost__avatar"
+          >
+          <p class="blogpost__author-name">
+            Lurisa Andrew
+          </p>
+          <div class="blogpost__activity">
+            <i class="icon-heart"></i>
+            <span>26</span>
+          </div>
+          <div class="blogpost__activity">
+            <i class="icon-chat"></i>
+            <span>7</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="blogpost__item">
+        <div class="blogpost__head">
+          <img 
+            src="{% static 'img/img-blogpost-3.jpg' %}" 
+            alt="blog" 
+            class="blogpost__img"
+          >
+          <div class="blogpost__date-wrap">
+            <img src="{% static 'img/img-blogpost-hover.png' %}" alt="">
+            <div class="blogpost__date">
+              <span>22</span>
+              Jan
+            </div>
+          </div>
+          
+          <a href="/" class="blogpost__like">
+            <i class="icon-heart"></i>
+          </a>
+        </div>
+
+        <div class="blogpost__body">
+          <h3 class="blogpost__title">
+            How to Use Rotary Evaporator in Chemical Labs
+          </h3>
+          <p class="blogpost__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque nibh enim,
+          </p>
+        </div>
+
+        <div class="blogpost__footer">
+          <img 
+            src="{% static 'img/icons/icon-blogpost-avatar-3.png' %}" 
+            alt="Author picture" 
+            class="blogpost__avatar"
+          >
+          <p class="blogpost__author-name">
+            Lurisa Andrew
+          </p>
+          <div class="blogpost__activity">
+            <i class="icon-heart"></i>
+            <span>26</span>
+          </div>
+          <div class="blogpost__activity">
+            <i class="icon-chat"></i>
+            <span>7</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <a 
+      href="{% url 'flatpages:articles' %}" 
+      class="btn btn--blue btn--md blogpost__btn"
+    >
+        View All
+    </a>
+  </div>
+</section>

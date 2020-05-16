@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load static %}
+
+{% block title %} Designik | Articles {% endblock title %}
+
+{% block content %}
+<section class="articles">
+  <div class="articles__container container">
+    {% include '../common/heading.html' with class="articles" text="Articles" %}
+    <ul class="articles__list">
+      {% if articles|length > 0 %}
+        {% for page in articles %}
+          <li class="articles__item">
+            <a 
+              href="{% url 'flatpages:article' slug=page.slug %}"
+              class="articles__link"
+            >
+              {% if page.image %}
+                <img 
+                  src="{% thumbnail page.image 350x300 %}" 
+                  alt="{{page.title}}" 
+                  class="articles__img"
+                >
+              {% else %}
+                <img 
+                  src="{% static 'img/articles/placeholder.jpg' %}" 
+                  alt="placeholder" 
+                  class="articles__img"
+                >
+              {% endif %}
+              <h1 class="articles__title">
+                {{ page.title }}
+              </h1>
+              <div class="articles__text">
+                {{page.content|truncatechars_html:100|safe}}
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+        <h1 class="articles__title">
+          Its empty at the moment
+        </h1>
+      {% endif %}
+    </ul>
+  </div>  
+</section>
+{% endblock content %}

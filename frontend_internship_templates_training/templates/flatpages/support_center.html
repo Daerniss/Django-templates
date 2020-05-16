@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %} Designik | FAQ {% endblock title %}
+
+{% block content %}
+<section class="faq">
+  <div class="container faq__container">
+    {% include "../common/heading.html" with class="questions" text="FAQ" %}
+
+    <ul class="questions">
+      {% if categories %}
+        {% for category in categories %}
+        <h3 class="questions__title">
+          {{category.title}}
+        </h3>
+        <div class="questions__wrap">
+          {% if category.elements.all|length > 0 %}
+            {% for element in category.elements.all %}
+            <li class="questions__item">
+              <div class="questions__header">
+                {{ element.question|safe }}
+              </div>
+              <div class="questions__content">
+                  {{ element.answer|safe }}
+              </div>
+            </li>
+            {% endfor %}
+          {% else %}
+            <h3 class="questions__title">
+              Empty...
+            </h3>
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% else %}
+        <h3 class="questions__title">
+          Its empty at the moment
+        </h3>
+      {% endif %}
+    </ul>
+  </div>
+</section>
+{% endblock content %}
+
+

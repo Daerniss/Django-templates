@@ -1,0 +1,49 @@
+.stats {
+	padding: 10rem 0;
+	text-align: center;
+	background: url('../img/bg-stats.jpg') center (center/cover) no-repeat;
+
+	&__heading {
+		margin-bottom: 7rem;
+	}
+
+	&__list {
+		@include respond(sm) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+
+		@include respond(sm) {
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__number {
+		display: block;
+		margin-bottom: 2.8rem;
+		font-size: 72px;
+		font-weight: 700;
+		color: $color-white;
+
+		&::after {
+			content: '+';
+			display: inline-block;
+			font-size: 50px;
+			transform: translateY(-20px);
+		}
+	}
+
+	&__description {
+		color: $color-white;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+}

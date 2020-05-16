@@ -1,0 +1,49 @@
+{% load static%}
+<section class="projects">
+  <div class="container projects__container">
+  
+    {% include "../common/heading.html" with class="projects" text="Our Latest Project" %}
+
+    <ul class="projects__list">
+      <li class="projects__item">
+        <img 
+          src="{% static 'img/img-projects-1.jpg' %}" 
+          alt="project-name-1" 
+          class="projects__img"
+        >
+        <div class="projects__overlay">
+          <a href="/" class="btn btn--md btn--black">
+            Read More
+          </a>
+        </div>
+      </li>
+      <li class="projects__item">
+        <img 
+          src="{% static 'img/img-projects-2.jpg' %}" 
+          alt="project-name-2" 
+          class="projects__img"
+        >
+        <div class="projects__overlay">
+          <a href="/" class="btn btn--md btn--black">
+            Read More
+          </a>
+        </div>
+      </li>
+      <li class="projects__item">
+        <img 
+          src="{% static 'img/img-projects-3.jpg' %}" 
+          alt="project-name-3" 
+          class="projects__img"
+        >
+        <div class="projects__overlay">
+          <a href="/" class="btn btn--md btn--black">
+            Read More
+          </a>
+        </div>
+      </li>
+    </ul>
+    <a href="/" class="btn btn--blue btn--md projects__btn">
+      View All
+    </a>
+  </div>
+</section>

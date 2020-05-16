@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto:300,400,500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favico/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favico/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favico/favicon-16x16.png' %}">
+  <title>{% block title %}Designik{% endblock %}</title>
+</head>
+<body>
+
+  {% include "common/header.html" %}
+
+  <main class="main">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  {% include "common/footer.html" %}
+
+  <script src="{% static "js/main.js" %}"></script>
+</body>
+</html>
+
+
+
+

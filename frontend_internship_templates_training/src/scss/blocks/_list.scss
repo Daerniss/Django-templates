@@ -1,0 +1,39 @@
+.list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-width: 730px;
+	margin: 0 auto;
+
+	@include respond(sm) {
+		justify-content: flex-start;
+		flex-direction: row;
+	}
+
+	@include respond(lg) {
+		max-width: 100%;
+	}
+
+	&__item {
+		max-width: 350px;
+		margin-bottom: 30px;
+
+		@include respond(sm) {
+			&:nth-child(odd) {
+				margin-right: 30px;
+			}
+		}
+
+		@include respond(lg) {
+			&:nth-child(odd) {
+				margin-right: 0;
+			}
+
+			&:not(:nth-child(3n)) {
+				margin-right: 30px;
+			}
+		}
+	}
+}

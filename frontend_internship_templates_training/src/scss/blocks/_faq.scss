@@ -1,0 +1,96 @@
+.questions {
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 5rem;
+  }
+
+  &__item {
+    border: 1px solid rgba($color-white, 0.2);
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+
+    &--active {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+
+    &::after {
+      content: "";
+      background: url(../img/icons/chevron-down.png) center/cover;
+      display: inline-block;
+      width: 2rem;
+      height: 1.2rem;
+      position: absolute;
+      right: 3rem;
+      top: 3rem;
+      transition: 0.5s;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    font-size: 40px;
+  }
+
+  &__item--active &__content {
+    height: auto;
+    opacity: 1;
+    padding-top: 30px;
+  }
+
+  &__content {
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: -5px;
+
+    // padding: 2rem 15rem 2rem 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  &__header {
+    font-family: $ff-lato;
+    color: $color-gray;
+    cursor: pointer;
+    outline: none;
+    font-size: 22px !important;
+    font-weight: 700;
+    transition: 0.5s;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.045rem;
+
+    padding: 2rem 3rem 2rem 3rem;
+
+    & > * {
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+
+  &__wrap:last-child &__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.faq {
+  padding: 5rem 0;
+  text-align: center;
+}

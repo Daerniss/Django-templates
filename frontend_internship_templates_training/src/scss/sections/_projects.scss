@@ -1,0 +1,64 @@
+.projects {
+	padding: 10rem 0;
+	text-align: center;
+	background: url("../img/bg-projects.jpg") bottom (center/cover) no-repeat;
+
+	&__heading {
+		margin-bottom: 7rem;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__btn {
+		margin: 0 auto;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin-bottom: 7rem;
+
+		@include respond(sm) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&__item {
+		position: relative;
+		max-width: 350px;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		@include respond(sm) {
+			&:not(:last-child) {
+				margin-right: 3rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(#1f2732, .5);
+		transition: all .7s ease;
+	}
+
+	&__item:hover &__overlay {
+		height: 100%;
+	}
+}

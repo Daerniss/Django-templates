@@ -1,0 +1,29 @@
+.recommendations {
+	padding: 3rem 0;
+	background-color: #2a9cf5;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+
+		@include respond(sm) {
+			flex-direction: row;
+		}
+	}
+
+	&__title {
+		color: #ffffff;
+		font-size: 25px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 3rem;
+
+		@include respond(sm) {
+			margin-bottom: 0;
+			font-size: 30px;
+		}
+	}
+}

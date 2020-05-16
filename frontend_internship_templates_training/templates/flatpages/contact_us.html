@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block title %} Designik | Contact Us {% endblock title %}
+
+{% block content %}
+
+  <section class="form-pages">
+    <div class="container form-pages__container">
+      
+      {% include "../common/heading.html" with class="form-pages" text="Contact Us" %}
+
+      <form 
+        action="{% url 'flatpages:contact-us' %}" 
+        autocomplete="off" 
+        novalidate
+        class="form form-pages__form"
+        id="contactUs-form"
+      >
+        {% csrf_token %}
+
+        {% for field in form.visible_fields %}
+          <div class="form__group form__group--{{field.name}}">
+            {% render_field field class="form__input" placeholder=" " %}
+            <label class="form__label" for="{{ field.id_for_label }}">
+              {{ field.label }}
+            </label>
+            <div class="form__errors">
+              {{field.errors}}
+            </div>
+          </div>
+        {% endfor %}
+        <button  
+          class="btn btn--md btn--blue form__btn" 
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="modal">
+      <div class="modal__body">
+        <p class="modal__text">
+          Your request was successfuly delivered!
+        </p>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+

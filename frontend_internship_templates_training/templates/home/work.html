@@ -1,0 +1,85 @@
+{% load static %}
+<section class="work">
+  <div class="container work__container">
+
+    {% include "../common/heading.html" with class="work" text="Our Work" %}
+
+    <div class="work__tabs">
+      <span class="work__tab">All</span>
+      <span class="work__tab">Logo</span>
+      <span class="work__tab">Business Card</span>
+      <span class="work__tab">Flyer</span>
+      <span class="work__tab">Brochure</span>
+    </div>
+
+    <ul class="work__list">
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-1.jpg' %}" 
+          alt="Adjuster University" 
+          class="work__img"
+        >
+      </li>
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-2.jpg' %}" 
+          alt="Bargain Store" 
+          class="work__img"
+        >
+      </li>
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-3.jpg' %}" 
+          alt="Jute" 
+          class="work__img"
+        >
+      </li>
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-4.jpg' %}" 
+          alt="Jovego" 
+          class="work__img"
+        >
+      </li>
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-5.jpg' %}" 
+          alt="Ollisein" 
+          class="work__img"
+        >
+      </li>
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-6.jpg' %}" 
+          alt="JQuotes" 
+          class="work__img"
+        >
+      </li>
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-7.jpg' %}" 
+          alt="Abdar" 
+          class="work__img"
+        >
+      </li>
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-8.jpg' %}" 
+          alt="CGConnect" 
+          class="work__img"
+        >
+      </li>
+      <li class="work__item">
+        <img 
+          src="{% static 'img/img-work-9.jpg' %}" 
+          alt="Infinity Sign" 
+          class="work__img"
+        >
+      </li>
+    </ul>
+    <a href="/" class="btn btn--md btn--blue work__btn">
+      View All
+    </a>
+
+  </div>
+</section>

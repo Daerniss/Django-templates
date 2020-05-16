@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Single Column with Tables</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <style type="text/css">
+        
+        /* CLIENT-SPECIFIC STYLES */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        /* table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; } */
+        img { -ms-interpolation-mode: bicubic; }
+        
+        /* RESET STYLES */
+        img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+        
+        /* iOS BLUE LINKS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+        
+        /* GMAIL BLUE LINKS */
+        u + #body a {
+            color: inherit;
+            text-decoration: none;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+        
+        /* SAMSUNG MAIL BLUE LINKS */
+        #MessageViewBody a {
+            color: inherit;
+            text-decoration: none;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+  
+        /* Universal styles for links and stuff */
+        a { color: #0052E2; text-decoration: none;}
+        a:hover { text-decoration: underline; }
+        /* a.button:hover { background- !important; } */
+  
+        td {
+          padding: 0 60px;
+        }
+        /* Responsive styles */
+        @media screen and (max-width: 599px) {
+          .mobile {
+            width: 100% !important;
+          }
+
+          .block {
+            display: block !important;
+            width: 100% !important;
+          }
+
+          td {
+            padding: 0 16px;
+          }
+        }
+  
+      </style>
+</head>
+<body>
+  <body id="body" style ="margin: 0 !important; padding: 0 !important;">
+     <table border="0" cellpadding="0" cellspacing="0" width="100%" >
+      <tr>
+        <td align="center">
+          <!-- CONTENT -->
+          <table border="0" cellpadding="0" cellspacing="0" width="600"  style="color: #4F5A68; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">
+
+            <!-- LOGO -->
+            <tr>
+              <td style="padding-top: 50px;">
+                <img style="margin-right: 10px;" src="{% static 'img/icons/logo.png' alt="Designik" %}"> 
+              </td>
+            </tr>
+
+            <!-- TEXT -->
+            <tr>
+              <td style="font-size: 24px; line-height: 32px;">
+                <p style="margin: 28px 0 0 0 ;">
+                  {% block title %}
+                  {% endblock title %}
+                </p>
+                
+              </td>
+            </tr>
+            <!-- SUBTEXT -->
+            <tr>
+              <td>
+                <p style="margin: 13px 0 0 0; color: #8593A6">
+                  {% block link %}
+                  {% endblock link %}
+                </p>
+              </td>
+            </tr>
+
+
+            <!-- LINE -->
+            <tr>
+              <td>
+                <hr style="margin-top: 24px;">
+              </td>
+            </tr>
+
+            <!-- LEGAL TEXT -->
+            <tr >
+              <td style="font-size: 10px;">
+                <p>
+                  This email was sent to you as a registered member of designik.com.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="font-size: 10px;">
+                <p>
+                  Use of the service and website is subject to our 
+                  <a href="http://localhost:8000/flatpages/privacy/">Privacy Policy</a> and <a href="http://localhost:8000/flatpages/tos/">Terms Of Service</a>.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="font-size: 10px;">
+                <p>
+                  © 2018 Designik. All rights reserved
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</body>
+</html>
